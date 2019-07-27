@@ -3,3 +3,14 @@
 ################################################################################
 
 /.vs/NetCoreApi/DesignTimeBuild
+/.vs/NetCoreApi/v16
+/src/Net.Core.Api/bin/Debug/netcoreapp3.0
+/src/Net.Core.Api/obj
+/src/Net.Core.Domain/obj
+/src/Net.Core.Domain/bin/Debug/netstandard2.0
+/src/Net.Core.Infra/bin/Debug/netcoreapp3.0
+/src/Net.Core.Infra/obj
+/src/Net.Core.Service/bin/Debug/netcoreapp3.0
+/src/Net.Core.Service/obj
+/src/Net.Core.Test/bin/Debug/netcoreapp3.0
+/src/Net.Core.Test/obj

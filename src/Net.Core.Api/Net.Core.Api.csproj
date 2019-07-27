@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Net.Core.Domain\Net.Core.Domain.csproj" />
+    <ProjectReference Include="..\Net.Core.Infra\Net.Core.Infra.csproj" />
+    <ProjectReference Include="..\Net.Core.Service\Net.Core.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Injections\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Resources\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+</Project>
