@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Net.Core.Api.Injections;
+using Net.Core.Infra.Injections;
 
 namespace Net.Core.Api
 {
@@ -26,6 +28,14 @@ namespace Net.Core.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddApplicationDbContext(configuration: Configuration);
+
+            services.AddCryptProtection();
+
+            services.AddCors();
+
+            services.AddJwt(configuration: Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,10 +48,12 @@ namespace Net.Core.Api
 
             app.UseHttpsRedirection();
 
+            app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
+
             app.UseRouting();
 
             app.UseAuthorization();
-
+                        
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

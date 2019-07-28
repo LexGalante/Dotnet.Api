@@ -21,10 +21,4 @@
     <ProjectReference Include="..\Net.Core.Domain\Net.Core.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Contexts\" />
-    <Folder Include="Contracts\" />
-    <Folder Include="Injections\" />
-  </ItemGroup>
-
 </Project>
